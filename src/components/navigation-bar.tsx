@@ -25,8 +25,8 @@ export function NavigationBar() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink {...(pathname === "/" ? { 'data-active': true } : {})}
+          <Link href="/home" legacyBehavior passHref>
+            <NavigationMenuLink {...(pathname === "/home" ? { 'data-active': true } : {})}
               className={navigationMenuTriggerStyle()} >
               Home
             </NavigationMenuLink>

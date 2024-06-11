@@ -1,8 +1,5 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import type { Metadata } from "next";
 import "./globals.css";
-import { NavigationBar } from "@/components/navigation-bar";
-import { ModeToggle } from "@/components/mode-toggle";
+import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
@@ -17,24 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex flex-col w-screen h-screen font-mono">
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <header className="h-12 px-1 flex justify-between items-center ">
-              <h1 className="text-sm pl-2">P R O J E C T - M I N I E S</h1>
-              <div className="flex space-x-1">
-                <NavigationBar/>
-                <ModeToggle/>
-              </div>
-            </header>
-            <main className="flex-grow flex justify-center items-center">
-              {children}
-            </main>
-          </ThemeProvider></body>
+      {children}
     </html>
   );
 }
