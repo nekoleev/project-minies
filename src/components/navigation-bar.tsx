@@ -16,13 +16,18 @@ import {
 } from "@/components/ui/navigation-menu"
 
 
+
 export function NavigationBar() {
+
+  const pathname = usePathname();
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink {...(pathname === "/" ? { 'data-active': true } : {})}
+              className={navigationMenuTriggerStyle()} >
               Home
             </NavigationMenuLink>
           </Link>
@@ -30,8 +35,9 @@ export function NavigationBar() {
       </NavigationMenuList>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link href="/about" legacyBehavior passHref>
+            <NavigationMenuLink {...(pathname === "/about" ? { 'data-active': true } : {})}
+              className={navigationMenuTriggerStyle()}>
               About
             </NavigationMenuLink>
           </Link>
@@ -39,8 +45,9 @@ export function NavigationBar() {
       </NavigationMenuList>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink {...(pathname === "/contact" ? { 'data-active': true } : {})}
+              className={navigationMenuTriggerStyle()}>
               Contact
             </NavigationMenuLink>
           </Link>
