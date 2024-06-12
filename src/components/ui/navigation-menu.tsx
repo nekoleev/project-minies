@@ -41,7 +41,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 w-20 items-center justify-center rounded-md border-x border-y bg-gray-200 mx-1 text-sm font-medium transition-colors hover:bg-zinc-300 hover:text-zinc-900 focus:bg-zinc-500 focus:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-zinc-400 data-[state=open]:bg-zinc-100/50 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50 dark:data-[active]:bg-zinc-700 dark:data-[state=open]:bg-zinc-800/50"
+  "group inline-flex h-9 w-20 items-center justify-center rounded-md border-x border-y border-gray-500 bg-gray-100 mx-1 text-sm font-medium transition-colors hover:bg-zinc-300 hover:text-zinc-900 focus:bg-zinc-500 focus:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-black data-[active]:text-white data-[state=open]:bg-zinc-100/50 dark:bg-zinc-950 dark:hover:bg-zinc-900 dark:hover:text-zinc-50 dark:focus:bg-zinc-700 dark:focus:text-zinc-50 dark:data-[active]:bg-white dark:data-[active]:text-black dark:data-[state=open]:bg-zinc-800/50"
 );
 
 const NavigationMenuTrigger = React.forwardRef<
