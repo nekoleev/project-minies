@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Transition from "@/components/transitions/transition";
 
 export default function Introduction() {
   const router = useRouter();
 
   useEffect(() => {
-    // Set a timeout to redirect after 3 seconds (3000 milliseconds)
     const timer = setTimeout(() => {
-      router.push('/home');
-    }, 3000);
-
-    // Cleanup the timer on component unmount
+      router.push("/home");
+    }, 7000);
     return () => clearTimeout(timer);
   }, [router]);
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', backgroundColor: '#000', color: '#fff' }}>
-      <h1>Welcome to My Website</h1>
-    </div>
+    <Transition>
+      <div className="flex items-center justify-center h-screen bg-black text-white">
+        <h1>Welcome to My Website</h1>
+      </div>
+    </Transition>
   );
 }
